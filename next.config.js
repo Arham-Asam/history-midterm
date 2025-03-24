@@ -3,6 +3,6 @@ const isProd = process.env.NODE_ENV === 'production'
 
 module.exports = {
     output: 'export',
-    basePath: isProd ? '/history-midterm' : '',
-    assetPrefix: isProd ? '/history-midterm/' : '',
+    basePath: '/history-midterm/',
+    assetPrefix: '/history-midterm/',
 }
