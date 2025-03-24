@@ -1,7 +1,56 @@
+/*
+'use client'
+import { useState } from 'react'
+import { entries } from '../../data/entries'
+import { Typography, Button, Stack } from '@mui/material'
+
+export default function ChronologicalPage() {
+    const [index, setIndex] = useState(0)
+    const entry = entries[index]
+
+    const next = () => setIndex((i) => Math.min(i + 1, entries.length - 1))
+    const prev = () => setIndex((i) => Math.max(i - 1, 0))
+
+    console.log('Loaded entry:', entry?.title)
+
+    return (
+        <main>
+            <Typography variant="h4" gutterBottom>
+                Chronological Mode
+            </Typography>
+
+            <Typography variant="h5" sx={{ mt: 3 }}>
+                {entry.title}
+            </Typography>
+            <Typography variant="body1" sx={{ whiteSpace: 'pre-line', my: 2 }}>
+                {entry.content}
+            </Typography>
+
+            <Stack direction="row" spacing={2} justifyContent="center">
+                <Button
+                    variant="outlined"
+                    onClick={prev}
+                    disabled={index === 0}
+                >
+                    Previous
+                </Button>
+                <Button
+                    variant="contained"
+                    onClick={next}
+                    disabled={index === entries.length - 1}
+                >
+                    Next
+                </Button>
+            </Stack>
+        </main>
+    )
+}
+
+*/
 // app/chronological/page.js
 'use client'
 import { useState } from 'react'
-import { entries } from '/entries'
+import { entries } from '../../data/entries'
 import {
     Container,
     Typography,
@@ -11,6 +60,9 @@ import {
     CardContent,
     Stack,
 } from '@mui/material'
+
+console.log('ENTRIES:', entries)
+console.log('FIRST ENTRY TITLE:', entries[0]?.title)
 
 export default function Chronological() {
     const [index, setIndex] = useState(0)
