@@ -11,7 +11,7 @@ export const entries = [
             menial issues, and committed infanticide, particularly of female babies, as the position of women in Arab societies was
             extremely poor.¹ 
             `,
-        image: '../../images/entry1map.jpg',
+        image: '/images/entry1map.jpg',
         citation: `1. Giladi, Avner. “Some Observations on Infanticide in Medieval Muslim Society.” 
         International Journal of Middle East Studies 22, no. 2 (1990): 185–200. http://www.jstor.org/stable/163739.
         // Image: OpenStax Textbook`,
@@ -36,7 +36,7 @@ export const entries = [
         and according to Islamic tradition the place where Abraham and Ishmael built the Kaaba, the most important Islamic site for 
         Muslims. The Prophet (PBUH) restored the Kaaba to be a place of worship of Allah as Islam was being spread, and the polytheists
         were defeated in various conflicts.`,
-        image: '../../images/part2Kaaba.png',
+        image: '/images/part2Kaaba.png',
         citation: `Ibrahim, Mahmood. “Social and Economic Conditions in Pre-Islamic Mecca.” 
         International Journal of Middle East Studies 14, 
         no. 3 (1982): 343–58. http://www.jstor.org/stable/163677.`,
@@ -62,7 +62,7 @@ export const entries = [
         a few conflicts including the Battle of Badr¹, in 630 the tribe of Quraysh surrendered, and the city of Mecca converted to Islam.
         The idols in the Kaaba were destroyed, reminiscent of the  story of the both Islamic and Biblical Prophet Abraham, and the house of Allah
         was restored. Muhammad succeeded in the unification of the Arabs through his preaching and guidance from Islam.`,
-        image: `../../images/quba.jpg`,
+        image: `/images/quba.jpg`,
         citation: `SIDDIQI, ASLAM. “JIHĀD, AN INSTRUMENT OF ISLAMIC REVOLUTION.” Islamic Studies 2, no. 3 (1963): 383–98. http://www.jstor.org/stable/20832700.`,
         comments_analysis: ``,
     },

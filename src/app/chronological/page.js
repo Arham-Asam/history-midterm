@@ -1,7 +1,7 @@
 // app/chronological/page.js
 'use client'
 import { useState } from 'react'
-import { entries } from '../../data/entries'
+import { entries } from '/entries'
 import {
     Container,
     Typography,
