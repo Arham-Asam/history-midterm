@@ -5,6 +5,6 @@ const repoName = 'history-midterm' // ← replace this!
 
 module.exports = {
     output: 'export',
-    basePath: isProd ? '/' : '',
-    assetPrefix: isProd ? '/' : '',
+    basePath: isProd ? '/history-midterm' : '',
+    assetPrefix: isProd ? '/history-midterm/' : '',
 }
