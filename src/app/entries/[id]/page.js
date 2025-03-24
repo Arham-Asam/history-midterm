@@ -1,42 +1,64 @@
-import { Typography } from '@mui/material'
-// ... other imports
+// app/entries/[id]/page.js
+import { entries } from '../../../data/entries'
+import { Typography, Card, CardContent, CardMedia, Box } from '@mui/material'
+
+// ✅ This tells Next.js which entry pages to statically generate
+export function generateStaticParams() {
+    return entries.map((entry) => ({
+        id: entry.id.toString(),
+    }))
+}
 
 export default function EntryPage({ params }) {
-    const { id } = params
-    const entry = entries.find((e) => e.id === parseInt(id))
+    const entry = entries.find((e) => e.id.toString() === params.id)
 
-    if (!entry) return <Typography variant="h6">Entry not found.</Typography>
+    if (!entry) {
+        return <Typography variant="h6">Entry not found.</Typography>
+    }
 
     return (
-        <main>
-            <Typography variant="h3" gutterBottom>
-                {entry.title}
-            </Typography>
+        <Box sx={{ mt: 5 }}>
+            <Card>
+                {entry.image && (
+                    <CardMedia
+                        component="img"
+                        height="300"
+                        image={entry.image}
+                        alt={entry.title}
+                    />
+                )}
+                <CardContent>
+                    <Typography variant="h4" gutterBottom>
+                        {entry.title}
+                    </Typography>
 
-            <img
-                src={entry.image}
-                alt={entry.title}
-                style={{
-                    width: '100%',
-                    maxHeight: '400px',
-                    objectFit: 'cover',
-                    margin: '20px 0',
-                }}
-            />
+                    {/* ✅ This preserves your line breaks */}
+                    <Typography variant="body1" sx={{ whiteSpace: 'pre-line' }}>
+                        {entry.content}
+                    </Typography>
 
-            {/* ✅ THIS IS THE FIXED LINE */}
-            <Typography variant="body1" sx={{ whiteSpace: 'pre-line' }}>
-                {entry.content}
-            </Typography>
+                    {entry.citation && (
+                        <Typography
+                            variant="body2"
+                            sx={{ mt: 3, fontStyle: 'italic', color: 'gray' }}
+                        >
+                            {entry.citation}
+                        </Typography>
+                    )}
 
-            {entry.citation && (
-                <Typography
-                    variant="body2"
-                    sx={{ mt: 3, fontStyle: 'italic', color: 'gray' }}
-                >
-                    {entry.citation}
-                </Typography>
-            )}
-        </main>
+                    {entry.comments_analysis && (
+                        <Box sx={{ mt: 4 }}>
+                            <Typography variant="h6">Your Analysis</Typography>
+                            <Typography
+                                variant="body2"
+                                sx={{ whiteSpace: 'pre-line' }}
+                            >
+                                {entry.comments_analysis}
+                            </Typography>
+                        </Box>
+                    )}
+                </CardContent>
+            </Card>
+        </Box>
     )
 }

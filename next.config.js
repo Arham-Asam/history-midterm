@@ -1,7 +1,7 @@
 // next.config.js
 const isProd = process.env.NODE_ENV === 'production'
 
-const repoName = 'your-repo-name' // ← replace this!
+const repoName = 'history-midterm' // ← replace this!
 
 module.exports = {
     output: 'export',
