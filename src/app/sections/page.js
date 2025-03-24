@@ -1,4 +1,4 @@
-import { entries } from '../../../data/entries'
+import { entries } from '../../data/entries'
 
 // ✅ This tells Next.js which static pages to generate!
 export function generateStaticParams() {

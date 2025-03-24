@@ -13,7 +13,7 @@ export const entries = [
             menial issues, and committed infanticide, particularly of female babies, as the position of women in Arab societies was
             extremely poor.¹ 
             `,
-        image: '/history-midterm/images/entry1map.jpg',
+        image: '/images/entry1map.jpg',
         citation: `1. Giladi, Avner. “Some Observations on Infanticide in Medieval Muslim Society.” 
         International Journal of Middle East Studies 22, no. 2 (1990): 185–200. http://www.jstor.org/stable/163739.
         // Image: OpenStax Textbook`,

@@ -10,37 +10,30 @@ import {
     CardContent,
     CardMedia,
     Box,
+    Container,
 } from '@mui/material'
 
 export default function ChronologicalPage() {
     const [index, setIndex] = useState(0)
     const entry = entries[index]
 
-    const next = () => {
-        if (index < entries.length - 1) {
-            setIndex(index + 1)
-        }
-    }
-
-    const prev = () => {
-        if (index > 0) {
-            setIndex(index - 1)
-        }
-    }
+    const next = () =>
+        setIndex((prev) => Math.min(prev + 1, entries.length - 1))
+    const prev = () => setIndex((prev) => Math.max(prev - 1, 0))
 
     return (
-        <Box sx={{ mt: 4 }}>
-            <Typography variant="h4" gutterBottom align="center">
+        <Container maxWidth="md" sx={{ mt: 5 }}>
+            <Typography variant="h4" align="center" gutterBottom>
                 Chronological Mode
             </Typography>
 
-            <Card sx={{ mb: 3 }}>
+            <Card>
                 {entry.image && (
                     <CardMedia
                         component="img"
-                        height="300"
                         image={entry.image}
                         alt={entry.title}
+                        height="300"
                         sx={{ objectFit: 'cover' }}
                     />
                 )}
@@ -51,6 +44,7 @@ export default function ChronologicalPage() {
                     <Typography variant="body1" sx={{ whiteSpace: 'pre-line' }}>
                         {entry.content}
                     </Typography>
+
                     {entry.citation && (
                         <Typography
                             variant="body2"
@@ -62,7 +56,12 @@ export default function ChronologicalPage() {
                 </CardContent>
             </Card>
 
-            <Stack direction="row" spacing={2} justifyContent="center">
+            <Stack
+                direction="row"
+                spacing={2}
+                justifyContent="center"
+                sx={{ mt: 4 }}
+            >
                 <Button
                     variant="outlined"
                     onClick={prev}
@@ -78,6 +77,6 @@ export default function ChronologicalPage() {
                     Next
                 </Button>
             </Stack>
-        </Box>
+        </Container>
     )
 }

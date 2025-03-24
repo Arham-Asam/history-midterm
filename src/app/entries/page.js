@@ -1,5 +1,5 @@
 // app/entries/[id]/page.js
-import { entries } from '../../../data/entries'
+import { entries } from '../../data/entries'
 import { Typography, Card, CardContent, CardMedia, Box } from '@mui/material'
 
 // ✅ This tells Next.js which entry pages to statically generate
