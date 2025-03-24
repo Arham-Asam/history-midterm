@@ -1,37 +1,39 @@
-// app/page.js
 'use client'
-import { Container, Typography, Button, Stack } from '@mui/material'
+import { Typography, Button, Stack } from '@mui/material'
 import Link from 'next/link'
 
 export default function Home() {
     return (
-        <Container maxWidth="md" sx={{ textAlign: 'center', mt: 5 }}>
+        <Stack spacing={3} sx={{ textAlign: 'center', mt: 8 }}>
             <Typography variant="h3" gutterBottom>
-                The Islamic Golden Age
+                The Rise of Islam and the Islamic Golden Age
             </Typography>
-            <Typography variant="h6" color="text.secondary" paragraph>
-                Explore the rise of Islam and its golden age from 600 CE to 1300
-                CE.
+            <Typography variant="h6" color="text.secondary">
+                Explore the transformation of the Near East from 600 to 1300 CE
+                through interactive historical entries.
             </Typography>
 
-            <Stack spacing={2} direction="column" sx={{ mt: 3 }}>
+            <Stack
+                direction="column"
+                spacing={2}
+                alignItems="center"
+                sx={{ mt: 4 }}
+            >
                 <Button
                     variant="contained"
-                    size="large"
                     component={Link}
-                    href="/sections/rise-of-islam"
+                    href="/sections/golden-age-of-islam"
                 >
-                    Browse by Sections
+                    Browse by Section
                 </Button>
                 <Button
                     variant="outlined"
-                    size="large"
                     component={Link}
                     href="/chronological"
                 >
                     Start Chronological Mode
                 </Button>
             </Stack>
-        </Container>
+        </Stack>
     )
 }
