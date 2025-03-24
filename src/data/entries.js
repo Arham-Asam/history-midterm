@@ -6,12 +6,14 @@ export const entries = [
         content: `The Arabian Peninsula in the 5th and 6th centuries CE was on a surface level an insignificant region, 
             with a harsh inhospitable geography typical of a desert region. Inhabited by a variety of independent tribes,
             the region had little influence or significance in the area, especially when contrasted with the neighboring Byzantine and 
-            Sasanian Empires. The Arabs before Islam were a brutish, ignorant and cruel people, most of them were illiterate 
+            Sasanian Empires. 
+            
+            The Arabs before Islam were a brutish, ignorant and cruel people, most of them were illiterate 
             and did not value education or intellectualism at all. They constantly engages in tribal conflict, often over 
             menial issues, and committed infanticide, particularly of female babies, as the position of women in Arab societies was
             extremely poor.¹ 
             `,
-        image: '/images/entry1map.jpg',
+        image: '/history-midterm/images/entry1map.jpg',
         citation: `1. Giladi, Avner. “Some Observations on Infanticide in Medieval Muslim Society.” 
         International Journal of Middle East Studies 22, no. 2 (1990): 185–200. http://www.jstor.org/stable/163739.
         // Image: OpenStax Textbook`,
